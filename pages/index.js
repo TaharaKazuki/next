@@ -187,7 +187,7 @@ const Home = () => (
     </div>
   </footer>
 
-  </div>  
+  </div>
 )
 
 export default Home
