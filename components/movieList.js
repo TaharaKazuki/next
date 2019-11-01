@@ -10,7 +10,8 @@ class MovieList extends React.Component {
     }
   }
 
-  increment = () => {
+  increment (string) {
+    console.info('通過', string)
     const { count } = this.state
     this.setState({ count: count + 1 })
   }
@@ -24,7 +25,7 @@ class MovieList extends React.Component {
     return (
       <>
         <div>
-          <button onClick={this.increment} className="btn btn-primary">Increment</button>
+          <button onClick={() => this.increment('hoge')} className="btn btn-primary">Increment</button>
           <button onClick={this.decrement} className="btn btn-primary">Decrement</button>
 
           <h1>{this.state.count}</h1>
