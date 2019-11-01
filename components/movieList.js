@@ -1,11 +1,34 @@
 import React from 'react'
+import { ALPN_ENABLED } from 'constants'
 
 
 class MovieList extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      count: 0
+    }
+  }
+
+  increment = () => {
+    alert('increment Number')
+  }
+
+  decrement = () => {
+    alert('decrement Number')
+  }
+
 
   render() {
     return (
       <>
+        <div>
+          <button onClick={this.increment} className="btn btn-primary">Increment</button>
+          <button onClick={this.decrement} className="btn btn-primary">Decrement</button>
+
+          <h1>{this.state.count}</h1>
+        </div>
+
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
