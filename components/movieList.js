@@ -1,34 +1,13 @@
 import React from 'react'
-import { ALPN_ENABLED } from 'constants'
 
 
 class MovieList extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      count: 0
-    }
-  }
-
-  increment (string) {
-    console.info('通過', string)
-    const { count } = this.state
-    this.setState({ count: count + 1 })
-  }
-
-  decrement = () => {
-    const { count } = this.state
-    this.setState({ count: count - 1 })
-  }
 
   render() {
     return (
       <>
         <div>
-          <button onClick={() => this.increment('hoge')} className="btn btn-primary">Increment</button>
-          <button onClick={this.decrement} className="btn btn-primary">Decrement</button>
-
-          <h1>{this.state.count}</h1>
+          <h1>{this.props.count}</h1>
         </div>
 
         <div className="col-lg-4 col-md-6 mb-4">
