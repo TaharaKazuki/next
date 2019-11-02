@@ -4,14 +4,16 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 
 class MovieApp extends App {
-  // static async getInitialProps(appContext) {
-  //   const appProps = await App.getInitialProps(appContext)
-  //   return { ...appContext }
-  // }
+  static async getInitialProps (appContext) {
 
+    const appProps = await App.getInitialProps(appContext)
+    console.info('appContext', appContext)
+    console.info('appProps', appProps)
+    return { ...appProps }
+  }
   render () {
-    const { Component } = this.props
-    console.info('Component', Component)
+    const { Component, pageProps } = this.props
+    console.info('pageProps', pageProps)
     
     return (
       <div>
@@ -24,7 +26,7 @@ class MovieApp extends App {
         </Head>
         <Navbar />
         <div className="base-page">
-          <Component/>
+          <Component { ...pageProps }/>
         </div>
         <Footer />
         <style jsx>{`
