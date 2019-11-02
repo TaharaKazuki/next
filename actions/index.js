@@ -33,6 +33,6 @@ export const getMovies = () => {
     setTimeout(() => {
       resolve(MOVIE_DATA)
       // reject('Can not fetch Data')
-    }, 2000)
+    }, 20)
   })
 }
