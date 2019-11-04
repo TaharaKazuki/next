@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link'
 
 class MovieList extends React.Component {
 
@@ -26,6 +26,7 @@ class MovieList extends React.Component {
           </div>
         </div>
       </div>
+      
     ))
   }
 
