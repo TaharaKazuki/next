@@ -7,8 +7,6 @@ class MovieApp extends App {
   static async getInitialProps (appContext) {
 
     const appProps = await App.getInitialProps(appContext)
-    console.info('appContext', appContext)
-    console.info('appProps', appProps)
     return { ...appProps }
   }
   render () {
