@@ -11,7 +11,6 @@ class MovieApp extends App {
   }
   render () {
     const { Component, pageProps } = this.props
-    console.info('pageProps', pageProps)
     
     return (
       <div>
