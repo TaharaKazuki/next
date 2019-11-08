@@ -1,28 +1,29 @@
 const Carousel = (props) => {
-
   const { images } = props
-  console.info('images', images)
   return (
     <div id="carouselExampleIndicators" className="carousel slide my-4" data-ride="carousel">
       <ol className="carousel-indicators">
         { images.map((image, index) => (
-          <li
-            key={index}
-            datq-target="#carouselExampleIndicators"
-            data-slide-to={index}
-            className={index === 0 ? 'active' : '' }>
-          </li>
-        ))}
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to={index}
+              className={index === 0 ? 'active' : ''}>
+            </li>
+            )
+          )
+        }
       </ol>
       <div className="carousel-inner" role="listbox">
-        { images.map((image, index) => {
-          <div className={`carousel-item ${index === 0 ? 'active' : '' }`}>
-            <img
-              className="d-block img-fluid"
-              src={image.url}
-              alt={image.name} />
-          </div>
-        })}
+        { images.map((image, index) => (
+            <div className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+              <img
+                className="d-block img-fluid"
+                src={image.url}
+                alt={image.name} />
+            </div>
+            )
+          )
+        }
       </div>
       <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
